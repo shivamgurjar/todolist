@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font and materialize.css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+
+</head>
+
+<body style="min-width: 400px;">
+    <nav>
+        <div class="nav-wrapper light-blue">
+            <a href="#" class="brand-logo center"><i class="material-icons">list_alt</i>ToDo List</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ul class="collection with-header">
+            <li class="collection-header center">
+                <h5>Items</h5>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle">event</i>
+                <div>Task Name<p>Description</p>
+                    <!-- <a href="#!" class="secondary-content">
+                        <i data-target="edit_items" class="material-icons modal-trigger edel" id="edit_task">edit</i>
+                        <i class="material-icons cdel" id="delete_task">delete</i>
+                    </a> -->
+                </div>
+            </li>
+
+        </ul>
+
+        <p data-target="add_items" class="btn-floating btn-large waves-effect waves-light light-blue right modal-trigger" id="add_btn">
+            <i class="material-icons">add</i>
+        </p>
+
+
+        <!-- A new page for adding task details - Task Name and Description -->
+        <div id="add_items" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col l6 m6 s6">
+                        <i class="material-icons prefix">wysiwyg</i>
+                        <input id="icon_title" type="text" class="validate">
+                        <label for="icon_title">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment</i>
+                        <input id="icon_descrip" type="text" class="validate">
+                        <label for="icon_descrip">Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" >
+                <a href="#!" class="modal-close waves-effect waves-green btn light-blue" id="addclick">Add</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons prefix" id = "delete_entry">delete</i></a>
+            </div>
+        </div>
+
+        <div id="edit_items" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col l6 m6 s6">
+                        <i class="material-icons prefix">wysiwyg</i>
+                        <input id="edit_title" type="text" class="validate">
+                        <label for="edit_title">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment</i>
+                        <input id="edit_descrip" type="text" class="validate">
+                        <label for="edit_descrip">Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" >
+                <a href="#!" class="modal-close waves-effect waves-green btn light-blue" id="editclick">Save</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons prefix" id ="delete_entry_edit">delete</i></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
